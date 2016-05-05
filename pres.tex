@@ -3,7 +3,7 @@
 %\usepackage{fontspec}
 %\setmainfont{Georgia}
 %\usepackage[T1]{fontenc}
-\usepackage{winfonts}
+%\usepackage{winfonts}
 \usepackage[backend=bibtex]{biblatex}
 \renewcommand{\sfdefault}{georgia}
 
@@ -96,31 +96,34 @@
 
 \begin{frame}
 	\frametitle{Applications}
-	\begin{columns}
-		\column{6cm}
-		In HAMR\footnotemark[1]:
-		\begin{itemize}
-			\item{$T_C$ distribution affects the noise performance}
-		\end{itemize} \vspace{5mm}
+	In Heat Assisted Magnetic Recording(HAMR)\footnotemark[1]:
+	\begin{itemize}
+		\item{Grains of the hard disk are heated to make them more easilly written}
+		\item{$T_C$ distribution affects the noise performance}
+		\item{Required for an areal density of up to 4Tb/in$^2$}
+	\end{itemize} \vspace{5mm}
 		
-		\begin{center}
-		\includegraphics[width=2.9cm]{Images/coerc} \hspace{1mm}
-		\includegraphics[width=2.9cm]{Images/laser} \\
-		\tiny E. Dobisz et al. Proc IEEE 96.11, 1836 (2008)
-		\end{center}
-		
-		\column{6cm}
-		In Magnetic Hyperthermia\footnotemark[2]:
-		\begin{itemize}
-		\item{Low $T_C$ reduces tissue damage}
-		\end{itemize}
-		
-		\begin{center}
-		\includegraphics[width=4cm]{Images/person} \\
-		\tiny \^{A}ngela Andrade et al. Coating Nanomagnetic Particles for Biomedical Applications (2011)
-		\end{center}
-	\end{columns}
+	\begin{center}
+	\includegraphics[width=4.5cm]{Images/coerc} \hspace{2mm}
+	\includegraphics[width=4.5cm]{Images/laser} \\
+	\tiny E. Dobisz et al. Proc IEEE 96.11, 1836 (2008)
+	\end{center}
 	\footnotetext[1]{\tiny D. Weller et al. IEEE Transactions on Magnetics 50.1, 3100108 (2014)}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Applications}
+	In Magnetic Hyperthermia Treatments\footnotemark[2]:
+	\begin{itemize}
+	\item{Magnetic nano-particles bind to the tumour cells}
+	\item{They are heated using an alternating magnetic field}
+	\item{Heating stops at $T_C$ allowing us to control the amount of tissue damage using grain sizes}
+	\end{itemize}
+		
+	\begin{center}
+	\includegraphics[width=4.5cm]{Images/person} \\
+	\tiny \^{A}ngela Andrade et al. Coating Nanomagnetic Particles for Biomedical Applications (2011)
+	\end{center}
 	\footnotetext[2]{\tiny I Apostolova et al. Solid State Communications 149.25, 986 (2009)}
 \end{frame}
 
