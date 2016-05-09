@@ -91,7 +91,55 @@
 
 \begin{frame}
 	\frametitle{My Research}
-	
+	The primary goal of my research is to develop a \textbf{multiscale} model of \textbf{granular} magnetic materials at \textbf{high temperatures}.
+	\begin{columns}
+		\column{7cm}
+		\begin{itemize}
+			\item{Granular: The material is actually an assembly of loosely connected/bonded grains $\sim 1nm - 10nm$}\newline
+			\item{High Teperature: Upon reach a certain temperature, the Curie temperature $T_c$, the material undergoes a phase transition}
+		\end{itemize}
+		\column{5cm}
+		\includegraphics[width=4cm]{Images/grains2}\newline
+		Phase Transition Picture Here
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{My Research}
+	The primary goal of my research is to develop a \textbf{multiscale} model of \textbf{granular} magnetic materials at \textbf{high temperatures}.
+	\begin{columns}
+		\column{7cm}
+		\begin{itemize}
+			\item{Multiscale: The model is currently based upon three different scales}\newline
+			\begin{enumerate}
+				\item{Atomic Scale: Using \textbf{density functional theory} (DFT) techniques, the bonding between the atoms is modelled to find interaction strengths, lattice shape e.t.c.}\newline
+				\item{Nano Scale: Using this information, the magnetic properties can be found for a grain at a number of temperatures}
+			\end{enumerate}
+		\end{itemize}
+		\column{5cm}
+		DFT Picture Here\newline
+		\includegraphics[width=4cm]{Images/Ds_noinset}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{My Research}
+	The primary goal of my research is to develop a \textbf{multiscale} model of \textbf{granular} magnetic materials at \textbf{high temperatures}.
+	\begin{columns}
+		\column{7cm}
+		\begin{itemize}
+			\item{Multiscale: The model is currently based upon three different scales}\newline
+			\begin{enumerate}
+				\setcounter{enumi}{2}
+				\item{Macro Scale: With the magnetic properties of different sized grains, finite sized scaling (FSS) can be used to find the properties of any sized grain. \newline \newline From this point, the properties of the entire ensemble can be found with a distribution of grain sizes.}
+			\end{enumerate}
+		\end{itemize}
+		\column{5cm}
+		\begin{center}
+			\includegraphics[width=4cm]{Images/Ds} \\
+			\includegraphics[width=4cm]{Images/Aggregate}
+		\end{center}
+	\end{columns}
 \end{frame}
 
 \begin{frame}
@@ -179,189 +227,6 @@
 		
 		\large{Contact: J.M.Waters@soton.ac.uk}
 	\end{center}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Defining Finite Sized $T_C$}
-	\begin{columns}
-		\column{6cm}
-		\begin{center}
-		Correlation length $\propto |T-T_C^b|^{-\nu}$ \\ \vspace{3mm}
-		Grain size, $D \propto |T_C(D)-T_C^b|^{-\nu}$ \\ \vspace{3mm}
-		\includegraphics[width=5cm]{Images/grains2}
-		\end{center}
-		\column{6cm}
-		\begin{center}
-		\includegraphics[width=5cm]{Images/TcD}
-		\vspace{4mm}
-		Distribution in $D$ leads to distribution in $T_C$
-		$$
-		f_D(D) \Longrightarrow f_{T_C}(T_C)
-		$$
-		\end{center}
-	\end{columns}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Currently Used Methods}
-	\vspace{4mm}
-	\begin{itemize}
-		\item{Explicit measurement of individual grains.\footnotemark[3]}
-		\begin{itemize}
-			\item{Switching temperature is measured by a laser system set up}
-			\item{This is related to $T_C$}
-		\end{itemize}
-		\vspace{4mm}
-		\item{Identification from macroscale measurements\footnotemark[4]}
-		\begin{itemize}
-			\item{Single measurement with magnetometer}
-			\item{Integral measure}
-			\item{But uses bulk relations}
-		\end{itemize}
-	\end{itemize}	
-	\footnotetext[3]{\tiny S. Pisana et al. IEEE Transactions on Magnetics 51.4, 1 (2015)}
-	\footnotetext[4]{\tiny A. Berger et al. J. Appl. Phys. 91.10, 8393 (2002)}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Objectives}
-	\begin{itemize}
-		\item{Develop a universal method to identify the $T_C$ distribution which incorporates the finite size effects of the individual grains\newline}
-		\item{Test the method against a well quantified benchmark (2D Ising system) in order to verify it's effectiveness for different distributions.\newline}
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Our Method}
-	\begin{columns}
-	\column{8cm}
-	\small{
-	\newline
-	Magnetisation for Ensemble of Grains:
-	$$
-	M(T) = M_0\int_0^\infty D^{d} m(D,T) f_D(D) dD
-	$$
-	Single Grain Magnetisation:
-	$$
-	m(D,T) \propto D^{-\beta/\nu} \mu \left(D^{1/\nu}\frac{T-T_C^b}{T_C^b}\right)
-	$$
-	Change of Variables:
-	$$
-	D = d_0\left(\frac{T_C^b - T_C(D)}{T_C^b}\right)^{-\nu} 
-	$$
-	Final Result:
-	$$
-	M(T) = M_0^*\int_0^{T_C^b} t^{-d\nu +\beta} \mu\left(\frac{T-T_C^b}{t}\right) f_t(t) dt
-	$$}
-	\column{4cm}
-	\begin{center}
-	\includegraphics[width=2.5cm]{Images/grains2}	
-	
-	\includegraphics[width=3.25cm]{Images/Ds_noinset}
-	
-	\includegraphics[width=3.25cm]{Images/Aggregate}
-	\end{center}
-	\end{columns}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Finding $f_t$}
-		
-	\begin{center}
-	\includegraphics[width=4cm]{Images/Aggregate} \hspace{3mm}
-	\includegraphics[width=4cm]{Images/Ds}
-	
-	$$
-	M(T) = M_0^*\int_0^{T_C^b} t^{-d\nu +\beta} \mu\left(\frac{T-T_C^b}{t}\right) f_t(t) dt
-	$$
-	
-	\begin{itemize}
-		\item{$M(T)$: To be fitted}
-		\item{$d$, $\nu$, $\beta$, $\mu$: Known information about the material}
-		\item{$T_C^b$: May be known, otherwise taken from fit}
-		\item{$M_0^*$, $f_t$ [ $\bar{t}$, $\sigma_t$ ]: Taken from the fit}
-	\end{itemize}
-	
-	$$
-	\bar{T}_C = T_C^b - \bar{t} \quad \quad \sigma_{T_C} = \sigma_t
-	$$
-	
-	\end{center}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Test Case: 2D Ising Model}
-	\begin{columns}
-	\column{7cm}
-		\small{
-		$$
-		M(T) = M_0^*\int_0^{T_C^b} t^{-d\nu +\beta} \mu\left(\frac{T-T_C^b}{t}\right) f_t(t) dt
-		$$}
-		Used 2D Ising model as a benchmark:
-		\begin{itemize}
-			\item{Simulated using Monte Carlo}
-			\item{Analytical results for $\beta$, $\nu$, $T_C^b$}
-			\begin{itemize}
-				\item{$\beta = 1.25$}
-				\item{$\nu=1$}
-				\item{$T_C^b \approx 2.269$}
-			\end{itemize}
-		\end{itemize} \vspace{4mm}
-		
-		Tested against different $f_D$:
-		\begin{itemize}
-			\item{All mean $\bar{D}=100$}
-			\item{Standard deviation $\sigma_D=10, 20, 30 ,40$}
-		\end{itemize}
-	\column{5cm}
-		\includegraphics[width=4.5cm]{Images/distros}
-		
-		\includegraphics[width=4.5cm]{Images/unconst}
-	\end{columns}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Test Case: 2D Ising Model}
-	\begin{columns}
-	\column{7cm}
-		Introduce constraint\footnotemark[5]:
-		$$
-		\Rightarrow \sigma_{T_C}^2 = (T_C^b - \bar{T}_C)^2\left(\left(1 + \frac{\sigma_D^2}{\bar{D}^2}\right)^{1/\nu^2}-1\right)
-		$$
-		
-		In the Ising model:
-		$$
-		\nu = 1
-		$$
-		$$
-		\Rightarrow \sigma_{T_C} = (T_C^b - \bar{T}_C)\frac{\sigma_D}{\bar{D}}
-		$$
-		\begin{center}\vspace{2mm}
-		
-		Fitted results far better!
-		\end{center}
-	\column{5cm}
-		\includegraphics[width=4.5cm]{Images/distros}
-		
-		\includegraphics[width=4.5cm]{Images/constr}
-	\end{columns}
-	\footnotetext[5]{\tiny O. Hovorka et al. Appl. Phys. Letters 101.5, 052406 (2012)}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Conclusions}
-	\small{
-	\begin{itemize}
-		\item{Universal method to find size dependent $T_C$ distribution based upon fitting ensemble magnetisation:}
-		$$
-		M(T) = M_0^*\int_0^{T_C^b} t^{-d\nu +\beta} \mu\left(\frac{T-T_C^b}{t}\right) f_t(t) dt
-		$$
-		\item{Successfully tested against 2D Ising model (without a loss in generality) and found a strong parameter correlation which can be solved by the constraint:}
-		$$
-		\sigma_{T_C}^2 = (T_C^b - \bar{T}_C)^2\left(\left(1 + \frac{\sigma_D^2}{\bar{D}^2}\right)^{1/\nu^2}-1\right)
-		$$
-		\item{Future work may find this insignificant in other systems. e.g. Heisenerg model, FePt Hamiltonian e.c.t.}
-	\end{itemize}}
 \end{frame}
 
 \end{document}
